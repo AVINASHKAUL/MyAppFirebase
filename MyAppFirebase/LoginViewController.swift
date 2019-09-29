@@ -23,7 +23,7 @@ class LoginViewController:BaseViewController{
                 Auth.auth().signIn(withEmail: email, password: password) { (response, error) in
                     if let response = response{
                         print("Email of current user is \(response.user.email ?? "Email not found")")
-                        presentViewController(fromVC: self, toVC: "LandingViewController", storyBoardName: "Main")
+                        presentViewController(fromVC: self, toVcStoryBoardID: "LandingViewController", storyBoardName: "Main")
                     }
                     
                     if let error = error{
@@ -32,7 +32,7 @@ class LoginViewController:BaseViewController{
                 }
             }
         }else{
-            presentViewController(fromVC: self, toVC: "LandingViewController", storyBoardName: "Main")
+            presentViewController(fromVC: self, toVcStoryBoardID: "LandingViewController", storyBoardName: "Main")
         }
     }
     

@@ -20,8 +20,12 @@ func getCurrentUserEmail() -> String?{
     return Auth.auth().currentUser?.email
 }
 
-func presentViewController(fromVC parent:UIViewController,toVC storyBoardID:String ,storyBoardName:String){
-    let storyBoard = UIStoryboard(name: storyBoardName, bundle: Bundle.main)
-    let viewController = storyBoard.instantiateViewController(withIdentifier: storyBoardID)
+func presentViewController(fromVC parent:UIViewController,toVcStoryBoardID:String ,storyBoardName:String){
+    let viewController = getViewController(fromStoryBoard: storyBoardName, vcStoryBoardID: toVcStoryBoardID)
     parent.present(viewController, animated: true, completion: nil)
+}
+
+func getViewController(fromStoryBoard storyBoardName:String, vcStoryBoardID:String)-> UIViewController{
+    let storyBoard = UIStoryboard(name: storyBoardName, bundle: Bundle.main)
+    return storyBoard.instantiateViewController(withIdentifier: vcStoryBoardID)
 }

@@ -18,9 +18,11 @@ class BaseViewController:UIViewController{
             print("Ok button clicked")
         }
     }
+    
     @objc func dismissKeyboard (_ sender: UITapGestureRecognizer){
         self.view.endEditing(true)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))

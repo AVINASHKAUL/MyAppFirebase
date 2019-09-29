@@ -18,6 +18,7 @@
 		1F2DEAD7233FE096001BF34B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DEAD6233FE096001BF34B /* Utils.swift */; };
 		1F2DEAD9233FE801001BF34B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DEAD8233FE801001BF34B /* LoginViewController.swift */; };
 		1F2DEADB233FE81F001BF34B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DEADA233FE81F001BF34B /* BaseViewController.swift */; };
+		1F2DEADE23400125001BF34B /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DEADD23400125001BF34B /* LandingViewController.swift */; };
 		95CD28E1A6C1477CBD3CF369 /* Pods_MyAppFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF6610E3F03C686D9EF0B9D /* Pods_MyAppFirebase.framework */; };
 		9E17FDDFE3440266B003E84C /* Pods_MyAppFirebaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A2AFD09F73DBD4BE91DFC3 /* Pods_MyAppFirebaseUITests.framework */; };
 		EA6ECCA2782509868875D06F /* Pods_MyAppFirebaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3050B2D30A1FBADD597AB273 /* Pods_MyAppFirebaseTests.framework */; };
@@ -58,6 +59,7 @@
 		1F2DEAD6233FE096001BF34B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		1F2DEAD8233FE801001BF34B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1F2DEADA233FE81F001BF34B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		1F2DEADD23400125001BF34B /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		2BF6610E3F03C686D9EF0B9D /* Pods_MyAppFirebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyAppFirebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3050B2D30A1FBADD597AB273 /* Pods_MyAppFirebaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyAppFirebaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37BB976E5A3A3BA9C877EBE0 /* Pods-MyAppFirebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAppFirebase.release.xcconfig"; path = "Target Support Files/Pods-MyAppFirebase/Pods-MyAppFirebase.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				1F2DEAA7233F8630001BF34B /* SignUpViewController.swift */,
 				1F2DEAA9233F8630001BF34B /* Main.storyboard */,
 				1F2DEAD8233FE801001BF34B /* LoginViewController.swift */,
+				1F2DEADD23400125001BF34B /* LandingViewController.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				1F2DEA9F233F8630001BF34B /* Frameworks */,
 				1F2DEAA0233F8630001BF34B /* Resources */,
 				2BD8D3AA72E5C8448E18A5F0 /* [CP] Embed Pods Frameworks */,
+				5FF2DA62098B6ED00522097D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -357,7 +361,9 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MyAppFirebase/Pods-MyAppFirebase-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -365,7 +371,9 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,6 +401,32 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FF2DA62098B6ED00522097D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyAppFirebase/Pods-MyAppFirebase-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyAppFirebase/Pods-MyAppFirebase-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C2533B208126BB3F7DE0519C /* [CP] Check Pods Manifest.lock */ = {
@@ -428,6 +462,7 @@
 				1F2DEAD9233FE801001BF34B /* LoginViewController.swift in Sources */,
 				1F2DEAA8233F8630001BF34B /* SignUpViewController.swift in Sources */,
 				1F2DEAD7233FE096001BF34B /* Utils.swift in Sources */,
+				1F2DEADE23400125001BF34B /* LandingViewController.swift in Sources */,
 				1F2DEAA6233F8630001BF34B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

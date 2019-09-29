@@ -203,7 +203,7 @@
         <!--LandingViewController-->
         <scene sceneID="RHq-5p-PeI">
             <objects>
-                <viewController storyboardIdentifier="LandingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0iq-Pv-cEl" userLabel="LandingViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LandingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0iq-Pv-cEl" userLabel="LandingViewController" customClass="LandingViewController" customModule="MyAppFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ddX-db-ZAV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

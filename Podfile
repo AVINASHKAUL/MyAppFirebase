@@ -8,6 +8,9 @@ target 'MyAppFirebase' do
   # Pods for MyAppFirebase
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
+  pod 'FirebaseUI/Auth'
+  pod 'FirebaseUI/Google'
+  pod 'Firebase/Database'
   target 'MyAppFirebaseTests' do
     inherit! :search_paths
     # Pods for testing
